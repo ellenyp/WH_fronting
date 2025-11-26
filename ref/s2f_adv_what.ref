@@ -1,0 +1,110 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v280",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "var": {
+        "Expressive_Verb": "(說|說說|開說|照說|接說|反說|妙說|怨說|老說|解說|問說|甫說|還說|答說|教說|拗說|論說|聊說|嗔說|前說|唸說|扯說|笑說|吵說|氣說|常說|紛說|更說|得說|急說|騙說|酸說|邊說|認說|斷說|難得說|回說|猛說|寫說|忙說|微說|嘆說|搶說|哭說|正說|推說|瞪說|掰說|抄說|指說|回|想回|怒回|忙回|笑回|爽回|慌答|冷答|忙答|稱|怒稱|謙稱|佯稱|答稱|供稱|改稱|謊稱|更稱|回稱|聲稱|宣稱|常想|直想|嘟嚷著|怒斥著|喊叫著|說著|叨唸著|喊著|念|叼念|唸|邊唸|猛唸|寫下|喊|高喊|大喊|笑喊|直喊|怒喊|猛喊|齊喊|驚喊|慟喊|哀喊|猛讚|互讚|嗆|怒嗆|酸嗆|反嗆|笑嗆|開嗆|大嗆|直嗆|嗔叫|直叫|暗叫|表達出|供出|唸出|道|嗔道|笑道|叫道|歎道|吼道|喊道|暗虧|直虧|斥|喝斥|直斥|怒斥|笑斥|忙問|發問|偷問|回問|笑問|直問|追問|猛問|哭問|怒問|暗批|反批|痛批|笑呼|急呼|疾呼|嬌呼|狂呼|齊呼|直言|斷言|怒言|笑言|描述|闡述|誇|直誇|怒罵|更罵|喝罵|強調|怒指|允諾|喝令|笑談|嗆明|呼籲|道賀|叫嚷|急駁|哭唱|想過|覺得|猛酸|哭求|鼓吹|怒飆|怒諷|勸|講|怨|曰)"
+    },
+    "utterance": {
+        "王小明買了帽子": {
+            "id": "56734ed5-d25d-473a-b6d2-03c1e0a0bfa8",
+            "pos": "<ENTITY_person>王小明</ENTITY_person><VerbP>買了</VerbP><ENTITY_noun>帽子</ENTITY_noun>",
+            "lexy": {
+                "買了": [
+                    "購買了",
+                    "拿了",
+                    "帶了",
+                    "送了",
+                    "買了",
+                    "買",
+                    "偷了",
+                    "想買",
+                    "借了",
+                    "賣了",
+                    "租了"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "每個人都會買衛生紙": {
+            "id": "f15a09e2-6852-47eb-8166-68adfdec8698",
+            "pos": "<ENTITY_DetPhrase>每個</ENTITY_DetPhrase><ENTITY_noun>人</ENTITY_noun><QUANTIFIER>都</QUANTIFIER><MODAL>會</MODAL><ACTION_verb>買</ACTION_verb><ENTITY_noun>衛生紙</ENTITY_noun>",
+            "lexy": {
+                "買": [
+                    "買進",
+                    "採買",
+                    "買東西",
+                    "收買",
+                    "賣",
+                    "採辦",
+                    "買",
+                    "買到",
+                    "買不到",
+                    "購得",
+                    "購買"
+                ]
+            },
+            "pattern": "<ENTITY_DetPhrase>每個</ENTITY_DetPhrase><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>人</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>(?:<QUANTIFIER>都</QUANTIFIER>)(?:<MODAL>[^<]+</MODAL>)<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "馬小莉最喜歡牛肉麵": {
+            "id": "a3be1f1c-bfd9-486f-b5da-1fd5bfbc2d53",
+            "pos": "<ENTITY_person>馬小莉</ENTITY_person><MODIFIER>最</MODIFIER><ACTION_verb>喜歡</ACTION_verb><ENTITY_noun>牛肉麵</ENTITY_noun>",
+            "lexy": {
+                "喜歡": [
+                    "熱愛",
+                    "喜歡",
+                    "崇拜",
+                    "深愛",
+                    "相愛",
+                    "愛護",
+                    "疼愛",
+                    "愛戴",
+                    "喜愛",
+                    "愛過",
+                    "憐愛"
+                ]
+            },
+            "pattern": "<ENTITY_person>[^<]+</ENTITY_person>(?:<(?:MODIFIER|ModifierP)>[^<]+</(?:MODIFIER|ModifierP)>)?<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "王先生在讀過那份文件之後就丟掉了": {
+            "id": "1ef2590a-afe7-4d04-b04c-6cb174c025d6",
+            "pos": "<ENTITY_pronoun>王先生</ENTITY_pronoun><ASPECT>在</ASPECT><VerbP>讀過</VerbP><ENTITY_DetPhrase>那份</ENTITY_DetPhrase><ENTITY_nouny>文件</ENTITY_nouny><RANGE_period>之後</RANGE_period><FUNC_inner>就</FUNC_inner><VerbP>丟掉了</VerbP>",
+            "lexy": {
+                "讀過": [
+                    "讀過",
+                    "聽說過",
+                    "念過",
+                    "讀了",
+                    "寫過",
+                    "讀到",
+                    "唸過",
+                    "讀完",
+                    "閱讀過",
+                    "出版過",
+                    "看過"
+                ],
+                "丟掉了": [
+                    "甩掉",
+                    "丟掉了",
+                    "丟開",
+                    "丟棄",
+                    "亂掉",
+                    "弄丟",
+                    "割棄",
+                    "丟失",
+                    "廢棄",
+                    "亂丟",
+                    "扔掉"
+                ]
+            },
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>|<ENTITY_person>[^<]+</ENTITY_person>)(?:<ASPECT>[^<]+</ASPECT>)?<(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>(?:<ENTITY_DetPhrase>([^<]+)</ENTITY_DetPhrase>)?<(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>([^<]+)</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>(?:<RANGE_(?:locality|period)>[^<]+</RANGE_(?:locality|period)>|<TIME_justtime>[^<]+</TIME_justtime>)<FUNC_inner>就</FUNC_inner><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}

@@ -1,0 +1,77 @@
+{
+    "language": "zh-tw",
+    "type": "advance",
+    "version": {
+        "atk": "v280",
+        "intent": "1.0"
+    },
+    "user_defined": {},
+    "var": {
+        "Expressive_Verb": "(說|說說|開說|照說|接說|反說|妙說|怨說|老說|解說|問說|甫說|還說|答說|教說|拗說|論說|聊說|嗔說|前說|唸說|扯說|笑說|吵說|氣說|常說|紛說|更說|得說|急說|騙說|酸說|邊說|認說|斷說|難得說|回說|猛說|寫說|忙說|微說|嘆說|搶說|哭說|正說|推說|瞪說|掰說|抄說|指說|回|想回|怒回|忙回|笑回|爽回|慌答|冷答|忙答|稱|怒稱|謙稱|佯稱|答稱|供稱|改稱|謊稱|更稱|回稱|聲稱|宣稱|常想|直想|嘟嚷著|怒斥著|喊叫著|說著|叨唸著|喊著|念|叼念|唸|邊唸|猛唸|寫下|喊|高喊|大喊|笑喊|直喊|怒喊|猛喊|齊喊|驚喊|慟喊|哀喊|猛讚|互讚|嗆|怒嗆|酸嗆|反嗆|笑嗆|開嗆|大嗆|直嗆|嗔叫|直叫|暗叫|表達出|供出|唸出|道|嗔道|笑道|叫道|歎道|吼道|喊道|暗虧|直虧|斥|喝斥|直斥|怒斥|笑斥|忙問|發問|偷問|回問|笑問|直問|追問|猛問|哭問|怒問|暗批|反批|痛批|笑呼|急呼|疾呼|嬌呼|狂呼|齊呼|直言|斷言|怒言|笑言|描述|闡述|誇|直誇|怒罵|更罵|喝罵|強調|怒指|允諾|喝令|笑談|嗆明|呼籲|道賀|叫嚷|急駁|哭唱|想過|覺得|猛酸|哭求|鼓吹|怒飆|怒諷|勸|講|怨|曰)"
+    },
+    "utterance": {
+        "張三不喜歡台北": {
+            "id": "0224abb5-5a25-4ede-953c-f77f0752ebd1",
+            "pos": "<ENTITY_person>張三</ENTITY_person><FUNC_negation>不</FUNC_negation><ACTION_verb>喜歡</ACTION_verb><LOCATION>台北</LOCATION>",
+            "lexy": {
+                "喜歡": [
+                    "崇拜",
+                    "愛過",
+                    "愛戴",
+                    "深愛",
+                    "相愛",
+                    "愛護",
+                    "喜愛",
+                    "喜歡",
+                    "熱愛",
+                    "憐愛",
+                    "疼愛"
+                ]
+            },
+            "pattern": "(?:<ENTITY_person>[^<]+</ENTITY_person>)<FUNC_negation>不</FUNC_negation><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)><LOCATION>([^<]+)</LOCATION>"
+        },
+        "他們在紐約見過面": {
+            "id": "6e82fc3b-b822-476f-b615-701bccd309f5",
+            "pos": "<ENTITY_pronoun>他們</ENTITY_pronoun><FUNC_inner>在</FUNC_inner><LOCATION>紐約</LOCATION><VerbP>見過</VerbP><ENTITY_oov>面</ENTITY_oov>",
+            "lexy": {
+                "見過": [
+                    "看過",
+                    "遇到過",
+                    "再見過",
+                    "見過",
+                    "問過",
+                    "聽過",
+                    "遇過",
+                    "聽說過",
+                    "碰過",
+                    "看到過",
+                    "接觸過"
+                ]
+            },
+            "pattern": "(?:<ENTITY_pronoun>[^<]+</ENTITY_pronoun>)(?:<FUNC_in(?:ner|ter)>(在)</FUNC_in(?:ner|ter)>)<LOCATION>([^<]+)</LOCATION><(?:ACTION_verb|VerbP)>見過</(?:ACTION_verb|VerbP)><(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>面</(?:UserDefined|ENTITY_(?:nounHead|nouny?|oov))>"
+        },
+        "張三在新竹看到林瑪莉": {
+            "id": "213c24bc-a3b2-494f-9578-84d920e051f5",
+            "pos": "<ENTITY_person>張三</ENTITY_person><FUNC_inner>在</FUNC_inner><LOCATION>新竹</LOCATION><ACTION_verb>看到</ACTION_verb><ENTITY_person>林瑪莉</ENTITY_person>",
+            "lexy": {
+                "看到": [
+                    "看著",
+                    "看到了",
+                    "看見",
+                    "聽到",
+                    "見到",
+                    "看過",
+                    "瞅見",
+                    "看到",
+                    "瞧見",
+                    "睇見",
+                    "聽見"
+                ]
+            },
+            "pattern": "(?:<ENTITY_person>[^<]+</ENTITY_person>)(?:<FUNC_in(?:ner|ter)>(在)</FUNC_in(?:ner|ter)>)<LOCATION>([^<]+)</LOCATION><(?:ACTION_verb|VerbP)>[^<]+</(?:ACTION_verb|VerbP)>(?:<ENTITY_person>[^<]+</ENTITY_person>)"
+        }
+    },
+    "alias": {},
+    "prompt": {},
+    "document": []
+}
